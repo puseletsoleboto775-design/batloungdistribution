@@ -1,18 +1,22 @@
 {
-  "name": "batloung-farm-api",
+  "name": "batloung-farm-frontend",
   "version": "1.0.0",
   "private": true,
-  "main": "src/server.js",
+  "type": "module",
   "scripts": {
-    "dev": "node --watch src/server.js",
-    "start": "node src/server.js"
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.6.1",
-    "express": "^4.21.2",
-    "helmet": "^8.0.0",
-    "morgan": "^1.10.0",
-    "mysql2": "^3.12.0"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.4",
+    "@tailwindcss/vite": "^4.0.0",
+    "tailwindcss": "^4.0.0",
+    "typescript": "^5.7.3",
+    "vite": "^6.0.7"
   }
 }
