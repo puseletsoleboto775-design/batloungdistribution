@@ -1,0 +1,16 @@
+DEPLOY THE WEBSITE ON NETLIFY (demo mode, no database or backend needed)
+
+1. Put the CONTENTS of this folder at the top level (root) of your GitHub repository:
+   package.json, package-lock.json, netlify.toml, index.html, vite.config.ts, src/, public/ ...
+   (package.json must be at the repo root, not inside another folder.)
+2. In Netlify: Add new site > Import from GitHub > pick the repo.
+   Build command: npm run build     Publish directory: dist
+   (netlify.toml already sets these and Node 22.)
+3. Deploy. Open the site and sign in with any username and password.
+   Username "sales" opens the salesperson view; anything else is the administrator.
+
+Demo data lives in the browser only and resets when the page is refreshed.
+
+To use the real backend later: deploy backend/ somewhere with MySQL, then add the Netlify
+environment variable VITE_API_URL = https://your-backend-address and redeploy.
+NEVER upload backend/.env to GitHub.
